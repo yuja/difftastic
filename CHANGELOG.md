@@ -1,5 +1,9 @@
 ## 0.64 (unreleased)
 
+### Display
+
+Inline display now includes unchanged lines between hunks.
+
 ## 0.63 (released 11th February 2025)
 
 ### Diffing

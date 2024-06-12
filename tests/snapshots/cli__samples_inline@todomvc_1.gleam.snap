@@ -7,9 +7,15 @@ input_file: sample_files/todomvc_1.gleam
 [2m15 [0m     [1mlet[0m application_secret = load_application_secret()
 [2m16 [0m     [1mlet[0m db = start_database_connection_pool()
 [2m17 [0m     [1mlet[0m web = routes.stack(application_secret, db)
+[2m18 [0m   
+[2m19 [0m     string.concat([[95m"Listening on localhost:"[0m, int.to_string(port), [95m" ✨"[0m])
 [91;1m20 [0m     [91;1m|>[0m log.info
+[2m21 [0m   
+   [2m18 [0m
    [92;1m19 [0m  [92;1mlet[0m [92mlog_string[0m [92m=[0m
+   [2m20 [0m    string.concat([[95m"Listening on localhost:"[0m, int.to_string(port), [95m" ✨"[0m])
    [92;1m21 [0m  log.info[92;1m([0m[92mlog_string[0m[92;1m)[0m
+   [2m22 [0m
    [2m23 [0m  [1massert[0m [1mOk[0m([94;3m_[0m) = elli.become(web, on_port: port)
    [2m24 [0m}
    [2m25 [0m

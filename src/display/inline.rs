@@ -1,5 +1,7 @@
 //! Inline, or "unified" diff display.
 
+use line_numbers::LineNumber;
+
 use crate::{
     constants::Side,
     display::{
@@ -97,13 +99,66 @@ pub(crate) fn print(
             display_options.num_context_lines as usize,
         );
 
-        for (lhs_line, _) in before_lines {
-            if let Some(lhs_line) = lhs_line {
+        // Common context lines will be emitted once at first or last. Uncommon
+        // lines will be inserted in between. Missing lines towards the hunk
+        // will also be filled.
+        let first_rhs_line = {
+            let common_len = before_lines
+                .iter()
+                .take_while(|(lhs_line, rhs_line)| lhs_line.is_some() && rhs_line.is_some())
+                .count();
+            let (common_lines, uncommon_lines) = before_lines.split_at(common_len);
+            if let Some((_, rhs_line)) = uncommon_lines.first() {
+                *rhs_line // first uncommon
+            } else if let Some(&(_, Some(LineNumber(a)))) = common_lines.last() {
+                match to_rhs_iter(hunk_lines).next() {
+                    Some(LineNumber(b)) => (a..=b).map(LineNumber).nth(1), // next of common
+                    None => None,
+                }
+            } else {
+                None
+            }
+        };
+        let last_lhs_line = {
+            let common_len = after_lines
+                .iter()
+                .rev()
+                .take_while(|(lhs_line, rhs_line)| lhs_line.is_some() && rhs_line.is_some())
+                .count();
+            let (uncommon_lines, common_lines) =
+                after_lines.split_at(after_lines.len() - common_len);
+            if let Some((lhs_line, _)) = uncommon_lines.last() {
+                *lhs_line // last uncommon
+            } else if let Some(&(Some(LineNumber(b)), _)) = common_lines.first() {
+                match to_lhs_iter(hunk_lines).next_back() {
+                    Some(LineNumber(a)) => (a..=b).map(LineNumber).nth_back(1), // prev of common
+                    None => None,
+                }
+            } else {
+                None
+            }
+        };
+
+        let all_lhs_lines = itertools::chain!(
+            to_lhs_iter(&before_lines),
+            to_lhs_iter(hunk_lines),
+            last_lhs_line,
+        );
+        let all_rhs_lines = itertools::chain!(
+            first_rhs_line,
+            to_rhs_iter(hunk_lines),
+            to_rhs_iter(&after_lines),
+        );
+
+        if let Some((first, last)) = get_first_last(all_lhs_lines) {
+            let mut lhs_hunk_lines = to_lhs_iter(hunk_lines).fuse().peekable();
+            for lhs_line in (first.0..=last.0).map(LineNumber) {
+                let is_novel = lhs_hunk_lines.next_if_eq(&lhs_line).is_some();
                 print!(
                     "{}   {}",
                     apply_line_number_color(
                         &format_line_num(lhs_line),
-                        false,
+                        is_novel,
                         Side::Left,
                         display_options,
                     ),
@@ -112,27 +167,15 @@ pub(crate) fn print(
             }
         }
 
-        for (lhs_line, _) in hunk_lines {
-            if let Some(lhs_line) = lhs_line {
-                print!(
-                    "{}   {}",
-                    apply_line_number_color(
-                        &format_line_num(*lhs_line),
-                        true,
-                        Side::Left,
-                        display_options,
-                    ),
-                    lhs_colored_lines[lhs_line.as_usize()]
-                );
-            }
-        }
-        for (_, rhs_line) in hunk_lines {
-            if let Some(rhs_line) = rhs_line {
+        if let Some((first, last)) = get_first_last(all_rhs_lines) {
+            let mut rhs_hunk_lines = to_rhs_iter(hunk_lines).fuse().peekable();
+            for rhs_line in (first.0..=last.0).map(LineNumber) {
+                let is_novel = rhs_hunk_lines.next_if_eq(&rhs_line).is_some();
                 print!(
                     "   {}{}",
                     apply_line_number_color(
-                        &format_line_num(*rhs_line),
-                        true,
+                        &format_line_num(rhs_line),
+                        is_novel,
                         Side::Right,
                         display_options,
                     ),
@@ -141,20 +184,24 @@ pub(crate) fn print(
             }
         }
 
-        for (_, rhs_line) in &after_lines {
-            if let Some(rhs_line) = rhs_line {
-                print!(
-                    "   {}{}",
-                    apply_line_number_color(
-                        &format_line_num(*rhs_line),
-                        false,
-                        Side::Right,
-                        display_options,
-                    ),
-                    rhs_colored_lines[rhs_line.as_usize()]
-                );
-            }
-        }
         println!();
     }
+}
+
+fn to_lhs_iter<T: Copy>(
+    items: &[(Option<T>, Option<T>)],
+) -> impl DoubleEndedIterator<Item = T> + '_ {
+    items.iter().filter_map(|(lhs, _)| *lhs)
+}
+
+fn to_rhs_iter<T: Copy>(
+    items: &[(Option<T>, Option<T>)],
+) -> impl DoubleEndedIterator<Item = T> + '_ {
+    items.iter().filter_map(|(_, rhs)| *rhs)
+}
+
+fn get_first_last<T: Copy>(mut iter: impl DoubleEndedIterator<Item = T>) -> Option<(T, T)> {
+    let first = iter.next()?;
+    let last = iter.next_back().unwrap_or(first);
+    Some((first, last))
 }
