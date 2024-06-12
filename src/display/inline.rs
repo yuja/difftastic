@@ -73,10 +73,10 @@ pub(crate) fn print(
             )
         );
 
-        let hunk_lines = hunk.lines.clone();
+        let hunk_lines = &hunk.lines;
 
         let before_lines =
-            calculate_before_context(&hunk_lines, &opposite_to_lhs, &opposite_to_rhs, 3);
+            calculate_before_context(hunk_lines, &opposite_to_lhs, &opposite_to_rhs, 3);
         let after_lines = calculate_after_context(
             &[&before_lines[..], &hunk_lines[..]].concat(),
             &opposite_to_lhs,
@@ -102,7 +102,7 @@ pub(crate) fn print(
             }
         }
 
-        for (lhs_line, _) in &hunk_lines {
+        for (lhs_line, _) in hunk_lines {
             if let Some(lhs_line) = lhs_line {
                 print!(
                     "{}   {}",
@@ -116,7 +116,7 @@ pub(crate) fn print(
                 );
             }
         }
-        for (_, rhs_line) in &hunk_lines {
+        for (_, rhs_line) in hunk_lines {
             if let Some(rhs_line) = rhs_line {
                 print!(
                     "   {}{}",
