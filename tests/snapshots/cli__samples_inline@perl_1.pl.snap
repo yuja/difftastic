@@ -1,0 +1,27 @@
+---
+source: tests/cli.rs
+expression: stdout
+input_file: sample_files/perl_1.pl
+---
+[1m[93msample_files/perl_2.pl[39m[0m[2m --- Perl[0m
+[2m8 [0m   
+[2m9 [0m   print [95m"Pi equals "[0m, PI, [95m"...\n"[0m;
+[2m10 [0m   
+[2m11 [0m   [1muse[0m constant {
+[91;1m12 [0m     [95mSEC[0m   [1m=>[0m 0, [91;3m# foo bar[0m
+[91;1m20 [0m     [95mISDST[0m [1m=>[0m [91m8[0m,
+[91;1m27 [0m   $f [1m=~[0m [91ms[0m[91m/[0m[91mfoo[0m[91m/[0m[91;1;4mbar[0m[91m/[0m[91mg[0m;
+   [92;1m12 [0m  [95mSEC[0m   [1m=>[0m 0, [92;3m# foo[0m
+   [92;1m20 [0m  [95mISDST[0m [1m=>[0m [92m10[0m,
+   [92;1m23 [0m[92;1mmy[0m [92m$setting[0m [92;1m=[0m [92;1m{[0m
+   [92;1m24 [0m  [92mopen[0m [92;1m=>[0m [92m1[0m[92m,[0m
+   [92;1m25 [0m  [92mclose[0m [92;1m=>[0m [92m2[0m[92m,[0m
+   [92;1m26 [0m  [92mrun[0m [92;1m=>[0m [92m3[0m[92m,[0m
+   [92;1m27 [0m  [92mawesome[0m [92;1m=>[0m [92m'yes'[0m[92m,[0m
+   [92;1m28 [0m[92;1m}[0m[92m;[0m
+   [92;1m29 [0m[92;1mmy[0m [92m%final[0m[92m;[0m
+   [92;1m30 [0m[92;1mforeach[0m [92;1mmy[0m [92m$key[0m [92;1m([0m[92mwoof[0m[92;1m([0m[92;1m)[0m[92;1m)[0m [92;1m{[0m
+   [92;1m31 [0m  [92m$final[0m[92;1m{[0m[92mIRONMAN[0m[92;1m}[0m[92;1m{[0m[92m$key[0m[92;1m}[0m [92;1m=[0m [92m$setting[0m[92m->{[0m[92m$key[0m[92m}[0m[92m;[0m
+   [92;1m33 [0m  [92mprint[0m [92mDumper[0m [92m\[0m[92m%final[0m[92m;[0m
+   [92;1m34 [0m[92;1m}[0m
+   [92;1m40 [0m$f [1m=~[0m [92ms[0m[92m/[0m[92mfoo[0m[92m/[0m[92;1;4mabc[0m[92m/[0m[92mg[0m;

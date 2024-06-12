@@ -1,0 +1,12 @@
+---
+source: tests/cli.rs
+expression: stdout
+input_file: sample_files/slider_at_end_1.json
+---
+[1m[93msample_files/slider_at_end_2.json[39m[0m[2m --- JSON[0m
+[2m1 [0m   [
+[2m2 [0m     [95m"one"[0m,
+[91;1m3 [0m     [91m"novel-1"[0m[91m,[0m
+[91;1m5 [0m     [91m"novel-2"[0m[91m,[0m
+   [2m4 [0m  [95m"three"[0m
+   [2m5 [0m]

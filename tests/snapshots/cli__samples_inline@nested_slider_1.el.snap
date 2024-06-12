@@ -1,0 +1,15 @@
+---
+source: tests/cli.rs
+expression: stdout
+input_file: sample_files/nested_slider_1.el
+---
+[1m[93msample_files/nested_slider_2.el[39m[0m[2m --- Emacs Lisp[0m
+[2m2 [0m     [94;3m"Guess the project root of the given FILE-PATH."[0m
+[2m3 [0m     ([1mlet[0m ((root default-directory)
+[2m4 [0m           (project (project-current)))
+[2m5 [0m       (when project
+[91;1m6 [0m         [91;1m([0m[91m-when-let[0m [91;1m([0m[91mroots[0m [91;1m([0m[91mproject-roots[0m [91mproject[0m[91;1m)[0m[91;1m)[0m
+[91;1m7 [0m           ([1msetq[0m root ([91mcar[0m [91mroots[0m))[91;1m)[0m)
+   [92;1m6 [0m      ([1msetq[0m root ([92mproject-root[0m [92mproject[0m)))
+   [2m7 [0m    (when root
+   [2m8 [0m      (deadgrep--lookup-override root))))

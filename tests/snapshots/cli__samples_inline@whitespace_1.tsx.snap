@@ -1,0 +1,15 @@
+---
+source: tests/cli.rs
+expression: stdout
+input_file: sample_files/whitespace_1.tsx
+---
+[1m[93msample_files/whitespace_2.tsx[39m[0m[2m --- TypeScript TSX[0m
+[2m17 [0m           isInvalid[1m=[0m{isInvalid}
+[2m18 [0m         >
+[2m19 [0m           <[1mButton[0m variant[1m=[0m[95m"outline-secondary"[0m className[1m=[0m[95m"my-1"[0m>
+[2m20 [0m             [1m<[0m[1mFontAwesomeIcon[0m icon[1m=[0m{faPlus} /> Adicionar arquivos{[95m" "[0m}
+   [92;1m23 [0m          [92;1m{[0m[92m" "[0m[92;1m}[0m
+   [2m24 [0m          Adicionar arquivos
+   [2m25 [0m          {[95m" "[0m}
+   [2m26 [0m
+   [2m27 [0m        </[1mButton[0m[1m>[0m
