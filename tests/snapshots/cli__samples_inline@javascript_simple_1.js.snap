@@ -1,0 +1,15 @@
+---
+source: tests/cli.rs
+expression: stdout
+input_file: sample_files/javascript_simple_1.js
+---
+[1m[93msample_files/javascript_simple_2.js[39m[0m[2m --- JavaScript[0m
+[2m1 [0m   [94;3m// hello[0m
+[91;1m3 [0m   bar([91m1[0m);
+[91;1m7 [0m     [95m"john"[0m, [95m"harry"[0m, [95m"dick"[0m, [95m"eric"[0m,
+   [92;1m2 [0m[92;1mif[0m [92;1m([0m[92;1mtrue[0m[92;1m)[0m [92;1m{[0m
+   [92;1m4 [0m  bar([92m2[0m);
+   [92;1m6 [0m[92;1m}[0m
+   [92;1m9 [0m  [95m"john"[0m, [95m"harry"[0m, [95m"dick"[0m, [92m"yvonne"[0m[92m,[0m
+   [2m10 [0m  [95m"eric"[0m, [95m"jenny"[0m, [95m"alexandra"[0m,
+   [2m11 [0m];

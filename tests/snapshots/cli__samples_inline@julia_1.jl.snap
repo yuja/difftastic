@@ -1,0 +1,32 @@
+---
+source: tests/cli.rs
+expression: stdout
+input_file: sample_files/julia_1.jl
+---
+[1m[93msample_files/julia_2.jl[39m[0m[2m --- 1/2 --- Julia[0m
+[2m25 [0m   israwtext(::[1mMIME[0m, x::[1mAbstractString[0m) [1m=[0m true
+[2m26 [0m   israwtext(::[95mMIME"text/plain"[0m, x::[1mAbstractString[0m) [1m=[0m false
+[2m27 [0m   israwtext(::[1mMIME[0m, x) [1m=[0m false
+   [92;1m29 [0m[92mInlineIOContext[0m[92;1m([0m[92mio[0m[92m,[0m [92mKVs[0m[92m::[0m[92;1mPair[0m[92m...[0m[92;1m)[0m [92;1m=[0m [92mIOContext[0m[92;1m([0m
+   [92;1m30 [0m    [92mio[0m[92m,[0m
+   [92;1m31 [0m    [92m:[0m[92mlimit[0m[92;1m=>[0m[92mtrue[0m[92m,[0m [92m:[0m[92mcolor[0m[92;1m=>[0m[92mtrue[0m[92m,[0m [92m:[0m[92mjupyter[0m[92;1m=>[0m[92mtrue[0m[92m,[0m
+   [92;1m32 [0m    [92mKVs[0m[92m...[0m
+   [92;1m33 [0m[92;1m)[0m
+   [2m34 [0m
+   [2m35 [0m[94;3m# convert x to a string of type mime, making sure to use an[0m
+   [2m36 [0m[94;3m# IOContext that tells the underlying show function to limit output[0m
+   [2m37 [0m[1mfunction[0m limitstringmime(mime::[1mMIME[0m, x)
+
+[1msample_files/julia_2.jl[0m[2m --- 2/2 --- Julia[0m
+[2m33 [0m       [1mif[0m istextmime(mime)
+[2m34 [0m           [1mif[0m israwtext(mime, x)
+[2m35 [0m               [1mreturn[0m String(x)
+[2m36 [0m           [1melse[0m
+[91;1m37 [0m               show([91mIOContext[0m(buf[91m,[0m [91m:[0m[91mlimit[0m[91;1m=>[0m[91mtrue[0m[91m,[0m [91m:[0m[91mcolor[0m[91;1m=>[0m[91mtrue[0m), mime, x)
+[91;1m44 [0m               show([91mIOContext[0m(b64[91m,[0m [91m:[0m[91mlimit[0m[91;1m=>[0m[91mtrue[0m[91m,[0m [91m:[0m[91mcolor[0m[91;1m=>[0m[91mtrue[0m), mime, x)
+   [92;1m43 [0m            show([92mInlineIOContext[0m(buf), mime, x)
+   [92;1m50 [0m            show([92mInlineIOContext[0m(b64), mime, x)
+   [2m51 [0m        [1mend[0m
+   [2m52 [0m        close(b64)
+   [2m53 [0m    [1mend[0m
+   [2m54 [0m    [1mreturn[0m String(take!(buf))
