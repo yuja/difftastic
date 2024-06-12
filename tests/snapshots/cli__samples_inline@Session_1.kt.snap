@@ -9,7 +9,9 @@ input_file: sample_files/Session_1.kt
 [2m97 [0m   [94;3m     * The session's photo URL.[0m
 [2m98 [0m   [94;3m     */[0m
 [91;1m99 [0m       [1mval[0m photoUrl: [91mString?[0m,
+[2m100 [0m   
    [92;1m99 [0m    [1mval[0m photoUrl: [92;1mString[0m,
+   [2m100 [0m
    [2m101 [0m    [94;3m/**[0m
    [2m102 [0m[94;3m     * IDs of the sessions related to this session.[0m
    [2m103 [0m[94;3m     */[0m
@@ -18,9 +20,21 @@ input_file: sample_files/Session_1.kt
 [2m113 [0m           [94;3m// available.[0m
 [2m114 [0m           return startTime [1m<=[0m now [1m&&[0m endTime [1m>=[0m now
 [2m115 [0m       }
+[2m116 [0m   
+[2m117 [0m       [94;3m/**[0m
+[2m118 [0m   [94;3m     * Returns whether the session has a video or not. A session could be live streaming or have a[0m
+[2m119 [0m   [94;3m     * recorded session. Both live stream and recorded videos are stored in [Session.youTubeUrl].[0m
+[2m120 [0m   [94;3m     */[0m
 [91;1m121 [0m       [91;1mfun[0m hasVideo() [1m=[0m youTubeUrl.isNotEmpty()
+   [2m116 [0m
    [92;1m117 [0m    [92;1mval[0m [92mhasPhoto[0m [92minline[0m [92mget[0m[92;1m([0m[92;1m)[0m [92;1m=[0m [92mphotoUrl[0m[92m.[0m[92misNotEmpty[0m[92;1m([0m[92;1m)[0m
+   [2m118 [0m
+   [2m119 [0m    [94;3m/**[0m
+   [2m120 [0m[94;3m     * Returns whether the session has a video or not. A session could be live streaming or have a[0m
+   [2m121 [0m[94;3m     * recorded session. Both live stream and recorded videos are stored in [Session.youTubeUrl].[0m
+   [2m122 [0m[94;3m     */[0m
    [92;1m123 [0m    [92;1mval[0m hasVideo [92minline[0m [92mget[0m() [1m=[0m youTubeUrl.isNotEmpty()
+   [2m124 [0m
    [92;1m125 [0m    [92;1mval[0m [92mhasPhotoOrVideo[0m [92minline[0m [92mget[0m[92;1m([0m[92;1m)[0m [92;1m=[0m [92mhasPhoto[0m [92;1m||[0m [92mhasVideo[0m
    [2m126 [0m
    [2m127 [0m    [94;3m/**[0m

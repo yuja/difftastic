@@ -9,7 +9,9 @@ input_file: sample_files/hack_1.php
 [2m4 [0m   [94;3m * Do stuff[0m
 [2m5 [0m   [94;3m */[0m
 [91;1m6 [0m   [1mfunction[0m foo(): vec<int> {
+[2m7 [0m     $x = [95m"foo"[0m;
 [91;1m8 [0m     [1mreturn[0m vec[1];
    [92;1m6 [0m[1mfunction[0m foo(): vec<[92m?[0mint> {
+   [2m7 [0m  $x = [95m"foo"[0m;
    [92;1m8 [0m  [1mreturn[0m vec[1[92m,[0m [92mnull[0m];
    [2m9 [0m}

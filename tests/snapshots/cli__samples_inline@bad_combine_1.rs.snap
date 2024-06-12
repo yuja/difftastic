@@ -13,6 +13,11 @@ input_file: sample_files/bad_combine_1.rs
 [91;1m7 [0m       [91mmax_rhs_src_line[0m[91m:[0m [91;1mLineNumber[0m[91m,[0m
 [91;1m8 [0m   [91;1m)[0m  [91;1m{[0m
 [91;1m9 [0m   [91;1m}[0m
+[2m10 [0m   
+[2m11 [0m   [1mfn[0m display_line_nums(
+[2m12 [0m   ) -> ([1mString[0m, [1mString[0m) {
+[2m13 [0m       [1mlet[0m display_rhs_line_num: [1mString[0m = [1mmatch[0m rhs_line_num {
+[2m14 [0m           [1mSome[0m(line_num) => {
 [91;1m15 [0m               [1mlet[0m s = format_line_num_padded(line_num, [91mrhs_column_width[0m);
    [92;1m5 [0m            [1mlet[0m s = format_line_num_padded(line_num, [92mwidths[0m[92m.[0m[92mrhs_line_nums[0m);
    [2m6 [0m            [1mif[0m rhs_lines_with_novel.contains([1m&[0mline_num) {

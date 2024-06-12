@@ -7,6 +7,7 @@ input_file: sample_files/julia_1.jl
 [2m25 [0m   israwtext(::[1mMIME[0m, x::[1mAbstractString[0m) [1m=[0m true
 [2m26 [0m   israwtext(::[95mMIME"text/plain"[0m, x::[1mAbstractString[0m) [1m=[0m false
 [2m27 [0m   israwtext(::[1mMIME[0m, x) [1m=[0m false
+   [2m28 [0m
    [92;1m29 [0m[92mInlineIOContext[0m[92;1m([0m[92mio[0m[92m,[0m [92mKVs[0m[92m::[0m[92;1mPair[0m[92m...[0m[92;1m)[0m [92;1m=[0m [92mIOContext[0m[92;1m([0m
    [92;1m30 [0m    [92mio[0m[92m,[0m
    [92;1m31 [0m    [92m:[0m[92mlimit[0m[92;1m=>[0m[92mtrue[0m[92m,[0m [92m:[0m[92mcolor[0m[92;1m=>[0m[92mtrue[0m[92m,[0m [92m:[0m[92mjupyter[0m[92;1m=>[0m[92mtrue[0m[92m,[0m
@@ -23,8 +24,20 @@ input_file: sample_files/julia_1.jl
 [2m35 [0m               [1mreturn[0m String(x)
 [2m36 [0m           [1melse[0m
 [91;1m37 [0m               show([91mIOContext[0m(buf[91m,[0m [91m:[0m[91mlimit[0m[91;1m=>[0m[91mtrue[0m[91m,[0m [91m:[0m[91mcolor[0m[91;1m=>[0m[91mtrue[0m), mime, x)
+[2m38 [0m           [1mend[0m
+[2m39 [0m       [1melse[0m
+[2m40 [0m           b64 [1m=[0m Base64EncodePipe(buf)
+[2m41 [0m           [1mif[0m isa(x, Vector{[1mUInt8[0m})
+[2m42 [0m               write(b64, x) [94;3m# x assumed to be raw binary data[0m
+[2m43 [0m           [1melse[0m
 [91;1m44 [0m               show([91mIOContext[0m(b64[91m,[0m [91m:[0m[91mlimit[0m[91;1m=>[0m[91mtrue[0m[91m,[0m [91m:[0m[91mcolor[0m[91;1m=>[0m[91mtrue[0m), mime, x)
    [92;1m43 [0m            show([92mInlineIOContext[0m(buf), mime, x)
+   [2m44 [0m        [1mend[0m
+   [2m45 [0m    [1melse[0m
+   [2m46 [0m        b64 [1m=[0m Base64EncodePipe(buf)
+   [2m47 [0m        [1mif[0m isa(x, Vector{[1mUInt8[0m})
+   [2m48 [0m            write(b64, x) [94;3m# x assumed to be raw binary data[0m
+   [2m49 [0m        [1melse[0m
    [92;1m50 [0m            show([92mInlineIOContext[0m(b64), mime, x)
    [2m51 [0m        [1mend[0m
    [2m52 [0m        close(b64)

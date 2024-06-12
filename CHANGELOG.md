@@ -4,6 +4,10 @@
 `~/.gitconfig` to match the manual, regardless of your difftastic
 version.**
 
+### Display
+
+Inline display now includes unchanged lines between hunks.
+
 ## 0.60 (released 1st August 2024)
 
 ### Diffing
