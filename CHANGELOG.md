@@ -9,6 +9,10 @@ nodes should be treated as atoms. This ensures comments are treated
 more consistently across languages. This fixes cases in Elm where
 comment differences were ignored, and may improve other languages too.
 
+### Display
+
+Inline display now includes unchanged lines between hunks.
+
 ## 0.58 (released 11th May 2024)
 
 ### Parsing

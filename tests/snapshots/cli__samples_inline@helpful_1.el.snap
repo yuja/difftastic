@@ -20,6 +20,7 @@ input_file: sample_files/helpful_1.el
 [2m218 [0m       (insert
 [2m219 [0m        (helpful--heading [95m"Source Code"[0m)
    [92;1m221 [0m      [92;1m([0m[92;1mif[0m [92;1m([0m[92meq[0m [92mhelpful--sym[0m [92mcanonical-sym[0m[92;1m)[0m
+   [2m222 [0m          [95m"Source Code"[0m
    [92;1m223 [0m        [92m"Alias Source Code"[0m[92;1m)[0m)
    [2m224 [0m     ([1mcond[0m
    [2m225 [0m      (source-path

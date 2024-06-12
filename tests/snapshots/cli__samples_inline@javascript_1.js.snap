@@ -20,10 +20,12 @@ input_file: sample_files/javascript_1.js
 [2m16 [0m           done();
 [2m17 [0m         });
 [2m18 [0m     });
+[2m19 [0m   
 [91;1m20 [0m     test([91m"Creating pages"[0m, done [1m=>[0m {
    [92;1m19 [0m  [92mtest[0m[92;1m([0m[92m"/edit POST"[0m[92m,[0m [92mdone[0m [92;1m=>[0m [92;1m{[0m
    [92;1m20 [0m    [92mdb[0m[92m.[0m[92mcreatePage[0m[92;1m([0m[92m"EditAuthExample"[0m[92m,[0m [92m"foo bar"[0m[92m,[0m [92;1m([0m[92merr[0m[92m,[0m [92mpage[0m[92;1m)[0m [92;1m=>[0m [92;1m{[0m
    [92;1m21 [0m      [92mexpect[0m[92;1m([0m[92merr[0m[92;1m)[0m[92m.[0m[92mtoBeNull[0m[92;1m([0m[92;1m)[0m[92m;[0m
+   [2m22 [0m
    [92;1m23 [0m      [92mrequest[0m[92;1m([0m[92mapp[0m[92;1m)[0m
    [92;1m24 [0m        [92m.[0m[92mpost[0m[92;1m([0m[92m"/edit/"[0m [92;1m+[0m [92mpage[0m[92m.[0m[92mrowid[0m[92;1m)[0m
    [92;1m25 [0m        [92m.[0m[92mtype[0m[92;1m([0m[92m"form"[0m[92;1m)[0m
@@ -35,6 +37,7 @@ input_file: sample_files/javascript_1.js
    [92;1m31 [0m        [92;1m}[0m[92;1m)[0m[92m;[0m
    [92;1m32 [0m    [92;1m}[0m[92;1m)[0m[92m;[0m
    [92;1m33 [0m  [92;1m}[0m[92;1m)[0m[92m;[0m
+   [2m34 [0m
    [92;1m35 [0m  test([92m"/new GET"[0m, done [1m=>[0m {
    [2m36 [0m    request(app)
    [2m37 [0m      .get([95m"/new"[0m)
@@ -74,7 +77,14 @@ input_file: sample_files/javascript_1.js
 [2m69 [0m       });
 [2m70 [0m     });
 [2m71 [0m   });
+   [2m94 [0m
    [92;1m95 [0m[92mdescribe[0m[92;1m([0m[92m"Viewing"[0m[92m,[0m [92;1m([0m[92;1m)[0m [92;1m=>[0m [92;1m{[0m
+   [2m96 [0m  test([95m"/all"[0m, done [1m=>[0m {
+   [2m97 [0m    request(app)
+   [2m98 [0m      .get([95m"/all"[0m)
+   [2m99 [0m      .expect(200, done);
+   [2m100 [0m  });
+   [2m101 [0m
    [92;1m102 [0m  [92mtest[0m[92;1m([0m[92m"/AnExamplePage"[0m[92m,[0m [92mdone[0m [92;1m=>[0m [92;1m{[0m
    [92;1m103 [0m    [92mdb[0m[92m.[0m[92mcreatePage[0m[92;1m([0m[92m"AnExamplePage"[0m[92m,[0m [92m"foo bar"[0m[92m,[0m [92;1m([0m[92;1m)[0m [92;1m=>[0m [92;1m{[0m
    [92;1m104 [0m      [92mrequest[0m[92;1m([0m[92mapp[0m[92;1m)[0m

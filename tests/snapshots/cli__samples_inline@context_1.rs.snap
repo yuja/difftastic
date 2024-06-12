@@ -9,6 +9,7 @@ input_file: sample_files/context_1.rs
 [91;1m3 [0m           [91;1mif[0m [91mprint_unchanged[0m [91;1m{[0m
 [91;1m4 [0m           [91;1m}[0m
 [91;1m5 [0m       [91;1m}[0m
+[2m6 [0m   
    [92;1m2 [0m    [92;1mmatch[0m [92;1m([0m[92;1m)[0m [92;1m{[0m
    [92;1m3 [0m        [92mx[0m [92m=>[0m [92;1m{[0m
    [2m4 [0m            [1mlet[0m opposite_to_lhs = opposite_positions([1m&[0msummary.lhs_positions);

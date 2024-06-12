@@ -6,4 +6,5 @@ input_file: sample_files/nesting_1.el
 [1m[93msample_files/nesting_2.el[39m[0m[2m --- Emacs Lisp[0m
 [91;1m2 [0m   [91;1m([0m[91mfoo[0m[91;1m)[0m
    [92;1m1 [0m[92ma[0m
+   [2m2 [0mb
    [2m3 [0mfoo
