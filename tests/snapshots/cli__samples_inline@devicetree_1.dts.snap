@@ -1,0 +1,50 @@
+---
+source: tests/cli.rs
+expression: stdout
+input_file: sample_files/devicetree_1.dts
+---
+[1m[93msample_files/devicetree_2.dts[39m[0m[2m --- 1/2 --- Device Tree[0m
+[2m4 [0m   [1m/memreserve/[0m 0x2000000000000000 0x0100000000000000;
+[2m5 [0m   [1m/memreserve/[0m 0x0000000000000000 0x0000000000000014;
+[2m6 [0m   
+[2m7 [0m   / {
+[91;1m8 [0m       model = [91m"MyBoardName"[0m;
+[91;1m9 [0m       compatible = "MyBoardName", "MyBoardFamilyName";
+   [92;1m8 [0m    model = [92m"MyBoardNamev2"[0m;
+   [92;1m9 [0m    compatible = "MyBoardName", "MyBoardFamilyName"[92m,[0m [92m"MyBoardRevision"[0m;
+   [2m10 [0m    #address-cells = <2>;
+   [2m11 [0m    #size-cells = <2>;
+   [2m12 [0m
+   [2m13 [0m    cpus {
+
+[1msample_files/devicetree_2.dts[0m[2m --- 2/2 --- Device Tree[0m
+[2m24 [0m               i-cache-size = <65536>;
+[2m25 [0m               d-cache-size = <32768>;
+[2m26 [0m           };
+[2m27 [0m   
+[91;1m28 [0m           [91mPowerPC,970[0m[91m@[0m[91;1m1[0m [91;1m{[0m
+[91;1m29 [0m               [91mname[0m [91m=[0m [91m"PowerPC,970"[0m[91m;[0m
+[91;1m30 [0m               [91mdevice_type[0m [91m=[0m [91m"cpu"[0m[91m;[0m
+[91;1m31 [0m               [91mreg[0m [91m=[0m [91;1m<[0m[91m0x00000001[0m[91;1m>[0m[91m;[0m
+[91;1m32 [0m               [91mclock-frequency[0m [91m=[0m [91;1m<[0m[91m1600000000[0m[91;1m>[0m[91m;[0m
+[91;1m33 [0m               [91mtimebase-frequency[0m [91m=[0m [91;1m<[0m[91m33333333[0m[91;1m>[0m[91m;[0m
+[91;1m34 [0m               [91mi-cache-size[0m [91m=[0m [91;1m<[0m[91m65536[0m[91;1m>[0m[91m;[0m
+[91;1m35 [0m               [91md-cache-size[0m [91m=[0m [91;1m<[0m[91m32768[0m[91;1m>[0m[91m;[0m
+[91;1m36 [0m           [91;1m}[0m[91m;[0m
+[91;1m45 [0m           [91mold[0m = <12345>;
+[91;1m46 [0m       };
+[91;1m54 [0m           [91mbootargs[0m [91m=[0m [91m"root=/dev/sda2"[0m[91m;[0m
+   [92;1m29 [0m    [92mrandomparentnode[0m [92;1m{[0m
+   [92;1m37 [0m            [92mnew[0m = <12345>;
+   [92;1m38 [0m        }[92m;[0m
+   [92;1m39 [0m    [92;1m}[0m;
+   [92;1m48 [0m    [92mmemory[0m[92m@[0m[92;1m100000[0m [92;1m{[0m
+   [92;1m49 [0m        [92mdevice_type[0m [92m=[0m [92m"memory"[0m[92m;[0m
+   [92;1m50 [0m        [92;1mmemreg[0m[92m:[0m [92mreg[0m [92m=[0m [92;1m<[0m
+   [92;1m51 [0m            [92m0x00100000[0m [92m0x00000000[0m
+   [92;1m52 [0m            [92m0x00100000[0m [92m0x20000000[0m[92;1m>[0m[92m;[0m
+   [92;1m53 [0m    [92;1m}[0m[92m;[0m
+   [92;1m57 [0m        [92mbootargs[0m [92m=[0m [92m"root=/dev/sda2"[0m[92m;[0m
+   [2m58 [0m    };
+   [2m59 [0m
+   [2m60 [0m};

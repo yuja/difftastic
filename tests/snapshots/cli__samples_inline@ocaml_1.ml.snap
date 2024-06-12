@@ -1,0 +1,15 @@
+---
+source: tests/cli.rs
+expression: stdout
+input_file: sample_files/ocaml_1.ml
+---
+[1m[93msample_files/ocaml_2.ml[39m[0m[2m --- OCaml[0m
+[2m2 [0m     x [1m+[0m 1
+[2m3 [0m   
+[2m4 [0m   [1mtype[0m [1mfoo[0m =
+[2m5 [0m     | [1mBar[0m
+[91;1m6 [0m     [91m|[0m [91;1mBaz[0m [91;1mof[0m [91;1mint[0m [91;1m*[0m [91;1m([0m[91m'ex[0m[91m,[0m [91m'en[0m[91;1m)[0m [91;1mlist[0m
+[91;1m12 [0m     [91m|[0m [91;1m`Bar[0m [91m->[0m [91m2[0m
+[91;1m19 [0m     | [1mX[0m
+   [92;1m17 [0m  | [1mX[0m [92m[@[0m[92mvisitor.opaque[0m[92m][0m
+   [92;1m19 [0m[92m[@@[0m[92mvisitor.opaque[0m[92m][0m
