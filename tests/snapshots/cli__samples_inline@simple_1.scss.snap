@@ -4,22 +4,22 @@ expression: stdout
 input_file: sample_files/simple_1.scss
 ---
 [1m[93msample_files/simple_2.scss[39m[0m[2m --- 1/2 --- SCSS[0m
-[91;1m1 [0m   @mixin buttons($basicBorder:1px, $gradient1:[91m#fff[0m, $gradient2:[95m#d8dee7[0m){
-[2m2 [0m     [1mbutton[0m{
-[91;1m3 [0m       border:$basicBorder [91msolid[0m [95m#acbed3[0m;
-[2m4 [0m       [94;3m//brings in Compass' background-image mixin:  http://compass-style.org/reference/compass/css3/images/[0m
-[2m5 [0m       @include background-image(linear-gradient($gradient1, $gradient2));
-[2m6 [0m       padding:3px 14px;
-[91;1m7 [0m       font-size:[91m12px[0m;
-   [92;1m1 [0m@mixin buttons($basicBorder:1px, $gradient1:[92m#333[0m, $gradient2:[95m#d8dee7[0m){
-   [2m2 [0m  [1mbutton[0m{
-   [92;1m3 [0m    border:$basicBorder [92mdotted[0m [95m#acbed3[0m;
-   [2m4 [0m    [94;3m//brings in Compass' background-image mixin:  http://compass-style.org/reference/compass/css3/images/[0m
-   [2m5 [0m    @include background-image(linear-gradient($gradient1, $gradient2));
-   [2m6 [0m    padding:3px 14px;
-   [92;1m7 [0m    font-size:[92m1rem[0m;
-   [2m8 [0m    color:[95m#3b557d[0m;
-   [2m9 [0m    [94;3m//brings in Compass' border-radius mixin: http://compass-style.org/reference/compass/css3/border_radius/[0m
+[91;1m 1 [0m   @mixin buttons($basicBorder:1px, $gradient1:[91m#fff[0m, $gradient2:[95m#d8dee7[0m){
+[2m 2 [0m     [1mbutton[0m{
+[91;1m 3 [0m       border:$basicBorder [91msolid[0m [95m#acbed3[0m;
+[2m 4 [0m       [94;3m//brings in Compass' background-image mixin:  http://compass-style.org/reference/compass/css3/images/[0m
+[2m 5 [0m       @include background-image(linear-gradient($gradient1, $gradient2));
+[2m 6 [0m       padding:3px 14px;
+[91;1m 7 [0m       font-size:[91m12px[0m;
+   [92;1m 1 [0m@mixin buttons($basicBorder:1px, $gradient1:[92m#333[0m, $gradient2:[95m#d8dee7[0m){
+   [2m 2 [0m  [1mbutton[0m{
+   [92;1m 3 [0m    border:$basicBorder [92mdotted[0m [95m#acbed3[0m;
+   [2m 4 [0m    [94;3m//brings in Compass' background-image mixin:  http://compass-style.org/reference/compass/css3/images/[0m
+   [2m 5 [0m    @include background-image(linear-gradient($gradient1, $gradient2));
+   [2m 6 [0m    padding:3px 14px;
+   [92;1m 7 [0m    font-size:[92m1rem[0m;
+   [2m 8 [0m    color:[95m#3b557d[0m;
+   [2m 9 [0m    [94;3m//brings in Compass' border-radius mixin: http://compass-style.org/reference/compass/css3/border_radius/[0m
    [2m10 [0m    @include border-radius($border-radius, $border-radius);
    [2m11 [0m    cursor:pointer;
 

@@ -4,10 +4,10 @@ expression: stdout
 input_file: sample_files/javascript_1.js
 ---
 [1m[93msample_files/javascript_2.js[39m[0m[2m --- 1/5 --- JavaScript[0m
-[2m6 [0m     db.init(done);
-[2m7 [0m   });
-[2m8 [0m   
-[2m9 [0m   describe([95m"Authentication"[0m, () [1m=>[0m {
+[2m 6 [0m     db.init(done);
+[2m 7 [0m   });
+[2m 8 [0m   
+[2m 9 [0m   describe([95m"Authentication"[0m, () [1m=>[0m {
 [91;1m10 [0m     test([91m"Editing pages"[0m, done [1m=>[0m {
    [92;1m10 [0m  test([92m"/edit GET"[0m, done [1m=>[0m {
    [2m11 [0m    request(app)
@@ -74,15 +74,15 @@ input_file: sample_files/javascript_1.js
    [2m85 [0m      request(app)
 
 [1msample_files/javascript_2.js[0m[2m --- 5/5 --- JavaScript[0m
-[2m69 [0m       });
-[2m70 [0m     });
-[2m71 [0m   });
-   [2m94 [0m
-   [92;1m95 [0m[92mdescribe[0m[92;1m([0m[92m"Viewing"[0m[92m,[0m [92;1m([0m[92;1m)[0m [92;1m=>[0m [92;1m{[0m
-   [2m96 [0m  test([95m"/all"[0m, done [1m=>[0m {
-   [2m97 [0m    request(app)
-   [2m98 [0m      .get([95m"/all"[0m)
-   [2m99 [0m      .expect(200, done);
+[2m 69 [0m       });
+[2m 70 [0m     });
+[2m 71 [0m   });
+   [2m 94 [0m
+   [92;1m 95 [0m[92mdescribe[0m[92;1m([0m[92m"Viewing"[0m[92m,[0m [92;1m([0m[92;1m)[0m [92;1m=>[0m [92;1m{[0m
+   [2m 96 [0m  test([95m"/all"[0m, done [1m=>[0m {
+   [2m 97 [0m    request(app)
+   [2m 98 [0m      .get([95m"/all"[0m)
+   [2m 99 [0m      .expect(200, done);
    [2m100 [0m  });
    [2m101 [0m
    [92;1m102 [0m  [92mtest[0m[92;1m([0m[92m"/AnExamplePage"[0m[92m,[0m [92mdone[0m [92;1m=>[0m [92;1m{[0m

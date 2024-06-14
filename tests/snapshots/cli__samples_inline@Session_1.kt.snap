@@ -4,13 +4,13 @@ expression: stdout
 input_file: sample_files/Session_1.kt
 ---
 [1m[93msample_files/Session_2.kt[39m[0m[2m --- 1/2 --- Kotlin[0m
-[2m95 [0m   
-[2m96 [0m       [94;3m/**[0m
-[2m97 [0m   [94;3m     * The session's photo URL.[0m
-[2m98 [0m   [94;3m     */[0m
-[91;1m99 [0m       [1mval[0m photoUrl: [91mString?[0m,
+[2m 95 [0m   
+[2m 96 [0m       [94;3m/**[0m
+[2m 97 [0m   [94;3m     * The session's photo URL.[0m
+[2m 98 [0m   [94;3m     */[0m
+[91;1m 99 [0m       [1mval[0m photoUrl: [91mString?[0m,
 [2m100 [0m   
-   [92;1m99 [0m    [1mval[0m photoUrl: [92;1mString[0m,
+   [92;1m 99 [0m    [1mval[0m photoUrl: [92;1mString[0m,
    [2m100 [0m
    [2m101 [0m    [94;3m/**[0m
    [2m102 [0m[94;3m     * IDs of the sessions related to this session.[0m
