@@ -4,12 +4,12 @@ expression: stdout
 input_file: sample_files/big_text_hunk_1.txt
 ---
 [1m[93msample_files/big_text_hunk_2.txt[39m[0m[2m --- Text[0m
-[2m4 [0m   github.com/naoina/toml v0.1.1 h1:PT/lllxVVN0gzzSqSlHEmP8MJB4MY2U7STGxiouV4X8=
-[2m5 [0m   github.com/naoina/toml v0.1.1/go.mod h1:NBIhNtsFMo3G2szEBne+bO4gS192HuIYRqfvOWb4i1E=
-[2m6 [0m   github.com/streadway/amqp v0.0.0-20160311215503-2e25825abdbd h1:625/bJvSNfQrzzK5ttnUqMqnVe8M5MILmf5ZRGgeeDY=
-[2m7 [0m   github.com/streadway/amqp v0.0.0-20160311215503-2e25825abdbd/go.mod h1:1WNBiOZtZQLpVAyu0iTduoJL9hEsMloAK5XWrtW0xdY=
-   [92;1m8 [0m[92;1mgithub.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=[0m
-   [92;1m9 [0m[92;1mgithub.com/stretchr/objx v0.4.0/go.mod h1:YvHI0jy2hoMjB+UWwv71VJQ9isScKT/TqJzVSSt89Yw=[0m
+[2m 4 [0m   github.com/naoina/toml v0.1.1 h1:PT/lllxVVN0gzzSqSlHEmP8MJB4MY2U7STGxiouV4X8=
+[2m 5 [0m   github.com/naoina/toml v0.1.1/go.mod h1:NBIhNtsFMo3G2szEBne+bO4gS192HuIYRqfvOWb4i1E=
+[2m 6 [0m   github.com/streadway/amqp v0.0.0-20160311215503-2e25825abdbd h1:625/bJvSNfQrzzK5ttnUqMqnVe8M5MILmf5ZRGgeeDY=
+[2m 7 [0m   github.com/streadway/amqp v0.0.0-20160311215503-2e25825abdbd/go.mod h1:1WNBiOZtZQLpVAyu0iTduoJL9hEsMloAK5XWrtW0xdY=
+   [92;1m 8 [0m[92;1mgithub.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=[0m
+   [92;1m 9 [0m[92;1mgithub.com/stretchr/objx v0.4.0/go.mod h1:YvHI0jy2hoMjB+UWwv71VJQ9isScKT/TqJzVSSt89Yw=[0m
    [92;1m10 [0m[92;1mgithub.com/stretchr/objx v0.5.0/go.mod h1:Yh+to48EsGEfYuaHDzXPcE3xhTkx73EhmCGUpEOglKo=[0m
    [92;1m11 [0m[92;1mgithub.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=[0m
    [92;1m12 [0m[92;1mgithub.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO+kdMU+MU=[0m

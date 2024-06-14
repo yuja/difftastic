@@ -4,12 +4,12 @@ expression: stdout
 input_file: sample_files/vhdl_1.vhd
 ---
 [1m[93msample_files/vhdl_2.vhd[39m[0m[2m --- VHDL[0m
-[2m4 [0m   
-[2m5 [0m   entity blinky is
-[2m6 [0m       port (
-[2m7 [0m           clk: in std_logic;
-[91;1m8 [0m           led: out [91mstd_logic[0m
-[2m9 [0m       );
+[2m 4 [0m   
+[2m 5 [0m   entity blinky is
+[2m 6 [0m       port (
+[2m 7 [0m           clk: in std_logic;
+[91;1m 8 [0m           led: out [91mstd_logic[0m
+[2m 9 [0m       );
 [2m10 [0m   end entity;
 [2m11 [0m   
 [2m12 [0m   architecture a of blinky is
@@ -27,8 +27,8 @@ input_file: sample_files/vhdl_1.vhd
 [2m24 [0m               end if;
 [2m25 [0m           end if;
 [2m26 [0m       end process;
-   [92;1m8 [0m        led: out [92mstd_logic_vector[0m[92;1m([0m[92m3[0m [92mdownto[0m [92m0[0m[92;1m)[0m
-   [2m9 [0m    );
+   [92;1m 8 [0m        led: out [92mstd_logic_vector[0m[92;1m([0m[92m3[0m [92mdownto[0m [92m0[0m[92;1m)[0m
+   [2m 9 [0m    );
    [2m10 [0mend entity;
    [2m11 [0m
    [2m12 [0marchitecture a of blinky is

@@ -9,7 +9,7 @@ use crate::{
         hunks::Hunk,
         style::{self, apply_colors, apply_line_number_color},
     },
-    lines::{format_line_num, split_on_newlines, MaxLine},
+    lines::{format_line_num, format_line_num_padded, split_on_newlines, MaxLine},
     options::DisplayOptions,
     parse::syntax::MatchedPos,
     summary::FileFormat,
@@ -149,15 +149,26 @@ pub(crate) fn print(
             to_rhs_iter(hunk_lines),
             to_rhs_iter(&after_lines),
         );
+        let first_last_lhs_lines = get_first_last(all_lhs_lines);
+        let first_last_rhs_lines = get_first_last(all_rhs_lines);
 
-        if let Some((first, last)) = get_first_last(all_lhs_lines) {
+        // Use the same column width so that left/right sides are aligned.
+        let max_line = [first_last_lhs_lines, first_last_rhs_lines]
+            .into_iter()
+            .flatten()
+            .map(|(_, last)| last)
+            .max()
+            .unwrap_or(LineNumber(0));
+        let line_column_width = format_line_num(max_line).len();
+
+        if let Some((first, last)) = first_last_lhs_lines {
             let mut lhs_hunk_lines = to_lhs_iter(hunk_lines).fuse().peekable();
             for lhs_line in (first.0..=last.0).map(LineNumber) {
                 let is_novel = lhs_hunk_lines.next_if_eq(&lhs_line).is_some();
                 print!(
                     "{}   {}",
                     apply_line_number_color(
-                        &format_line_num(lhs_line),
+                        &format_line_num_padded(lhs_line, line_column_width),
                         is_novel,
                         Side::Left,
                         display_options,
@@ -167,14 +178,14 @@ pub(crate) fn print(
             }
         }
 
-        if let Some((first, last)) = get_first_last(all_rhs_lines) {
+        if let Some((first, last)) = first_last_rhs_lines {
             let mut rhs_hunk_lines = to_rhs_iter(hunk_lines).fuse().peekable();
             for rhs_line in (first.0..=last.0).map(LineNumber) {
                 let is_novel = rhs_hunk_lines.next_if_eq(&rhs_line).is_some();
                 print!(
                     "   {}{}",
                     apply_line_number_color(
-                        &format_line_num(rhs_line),
+                        &format_line_num_padded(rhs_line, line_column_width),
                         is_novel,
                         Side::Right,
                         display_options,

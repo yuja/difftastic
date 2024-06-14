@@ -4,7 +4,7 @@ expression: stdout
 input_file: sample_files/hcl_1.hcl
 ---
 [1m[93msample_files/hcl_2.hcl[39m[0m[2m --- 1/4 --- HCL[0m
-[2m9 [0m     [1mesc1[0m   = "\" \t \UFF11FF22 \uFFFF \n"
+[2m 9 [0m     [1mesc1[0m   = "\" \t \UFF11FF22 \uFFFF \n"
 [2m10 [0m     [1mesc2[0m   = "$${} %%{}"
 [2m11 [0m     [1mnum1[0m   = 2
 [2m12 [0m     [1mnum2[0m   = 2.112

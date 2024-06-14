@@ -16,8 +16,8 @@ input_file: sample_files/qml_1.qml
    [2m7 [0m    height: 400
 
 [1msample_files/qml_2.qml[0m[2m --- 2/2 --- QML[0m
-[2m8 [0m       visible: [1mtrue[0m
-[2m9 [0m   
+[2m 8 [0m       visible: [1mtrue[0m
+[2m 9 [0m   
 [2m10 [0m       [1mButton[0m {
 [2m11 [0m           id: button
 [2m12 [0m           text: [95m"A Special Button"[0m

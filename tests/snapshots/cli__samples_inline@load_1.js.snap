@@ -65,15 +65,15 @@ input_file: sample_files/load_1.js
    [2m39 [0m    total[1m++[0m;
 
 [1msample_files/load_2.js[0m[2m --- 3/4 --- JavaScript[0m
-[2m91 [0m               localPath: [95m"ouroboros.jpg"[0m,
-[2m92 [0m             }),
-[2m93 [0m   
-[2m94 [0m             [94;3m// Base codemirror[0m
-[91;1m95 [0m             [91mcreateNodeModuleResource[0m(
-[2m96 [0m               [95m"node_modules/codemirror/lib/codemirror.css"[0m
-[2m97 [0m             ),
-[91;1m98 [0m             [91mcreateNodeModuleResource[0m([95m"node_modules/codemirror/lib/codemirror.js"[0m),
-[2m99 [0m   
+[2m 91 [0m               localPath: [95m"ouroboros.jpg"[0m,
+[2m 92 [0m             }),
+[2m 93 [0m   
+[2m 94 [0m             [94;3m// Base codemirror[0m
+[91;1m 95 [0m             [91mcreateNodeModuleResource[0m(
+[2m 96 [0m               [95m"node_modules/codemirror/lib/codemirror.css"[0m
+[2m 97 [0m             ),
+[91;1m 98 [0m             [91mcreateNodeModuleResource[0m([95m"node_modules/codemirror/lib/codemirror.js"[0m),
+[2m 99 [0m   
 [2m100 [0m             [94;3m// Editor conveniences[0m
 [91;1m101 [0m             [91mcreateNodeModuleResource[0m(
 [2m102 [0m               [95m"node_modules/codemirror/addon/edit/closebrackets.js"[0m
@@ -152,34 +152,34 @@ input_file: sample_files/load_1.js
 [91;1m175 [0m             [91mcreateNodeModuleResource[0m(
 [91;1m176 [0m               [91m"node_modules/handlebars/dist/handlebars.js"[0m[91m,[0m
 [91;1m177 [0m               [95m"handlebars/handlebars.js"[0m
-   [92;1m72 [0m          [92mcreateResource[0m(
-   [92;1m73 [0m            [92m"codemirror/lib/codemirror.css"[0m[92m,[0m
-   [2m74 [0m            [95m"node_modules/codemirror/lib/codemirror.css"[0m
-   [2m75 [0m          ),
-   [92;1m76 [0m          [92mcreateResource[0m(
-   [92;1m77 [0m            [92m"codemirror/lib/codemirror.js"[0m[92m,[0m
-   [2m78 [0m            [95m"node_modules/codemirror/lib/codemirror.js"[0m
-   [2m79 [0m          ),
-   [2m80 [0m
-   [2m81 [0m          [94;3m// Editor conveniences[0m
-   [92;1m82 [0m          [92mcreateResource[0m(
-   [92;1m83 [0m            [92m"codemirror/addon/edit/closebrackets.js"[0m[92m,[0m
-   [2m84 [0m            [95m"node_modules/codemirror/addon/edit/closebrackets.js"[0m
-   [2m85 [0m          ),
-   [92;1m86 [0m          [92mcreateResource[0m(
-   [92;1m87 [0m            [92m"codemirror/addon/edit/matchbrackets.js"[0m[92m,[0m
-   [2m88 [0m            [95m"node_modules/codemirror/addon/edit/matchbrackets.js"[0m
-   [2m89 [0m          ),
-   [92;1m90 [0m          [92mcreateResource[0m(
-   [92;1m91 [0m            [92m"codemirror/addon/selection/active-line.js"[0m[92m,[0m
-   [2m92 [0m            [95m"node_modules/codemirror/addon/selection/active-line.js"[0m
-   [2m93 [0m          ),
-   [2m94 [0m
-   [2m95 [0m          [94;3m// Linting in editor.[0m
-   [92;1m96 [0m          [92mcreateResource[0m(
-   [92;1m97 [0m            [92m"codemirror/addon/lint/lint.css"[0m[92m,[0m
-   [2m98 [0m            [95m"node_modules/codemirror/addon/lint/lint.css"[0m
-   [2m99 [0m          ),
+   [92;1m 72 [0m          [92mcreateResource[0m(
+   [92;1m 73 [0m            [92m"codemirror/lib/codemirror.css"[0m[92m,[0m
+   [2m 74 [0m            [95m"node_modules/codemirror/lib/codemirror.css"[0m
+   [2m 75 [0m          ),
+   [92;1m 76 [0m          [92mcreateResource[0m(
+   [92;1m 77 [0m            [92m"codemirror/lib/codemirror.js"[0m[92m,[0m
+   [2m 78 [0m            [95m"node_modules/codemirror/lib/codemirror.js"[0m
+   [2m 79 [0m          ),
+   [2m 80 [0m
+   [2m 81 [0m          [94;3m// Editor conveniences[0m
+   [92;1m 82 [0m          [92mcreateResource[0m(
+   [92;1m 83 [0m            [92m"codemirror/addon/edit/closebrackets.js"[0m[92m,[0m
+   [2m 84 [0m            [95m"node_modules/codemirror/addon/edit/closebrackets.js"[0m
+   [2m 85 [0m          ),
+   [92;1m 86 [0m          [92mcreateResource[0m(
+   [92;1m 87 [0m            [92m"codemirror/addon/edit/matchbrackets.js"[0m[92m,[0m
+   [2m 88 [0m            [95m"node_modules/codemirror/addon/edit/matchbrackets.js"[0m
+   [2m 89 [0m          ),
+   [92;1m 90 [0m          [92mcreateResource[0m(
+   [92;1m 91 [0m            [92m"codemirror/addon/selection/active-line.js"[0m[92m,[0m
+   [2m 92 [0m            [95m"node_modules/codemirror/addon/selection/active-line.js"[0m
+   [2m 93 [0m          ),
+   [2m 94 [0m
+   [2m 95 [0m          [94;3m// Linting in editor.[0m
+   [92;1m 96 [0m          [92mcreateResource[0m(
+   [92;1m 97 [0m            [92m"codemirror/addon/lint/lint.css"[0m[92m,[0m
+   [2m 98 [0m            [95m"node_modules/codemirror/addon/lint/lint.css"[0m
+   [2m 99 [0m          ),
    [92;1m100 [0m          [92mcreateResource[0m(
    [92;1m101 [0m            [92m"codemirror/addon/lint/lint.js"[0m[92m,[0m
    [2m102 [0m            [95m"node_modules/codemirror/addon/lint/lint.js"[0m
