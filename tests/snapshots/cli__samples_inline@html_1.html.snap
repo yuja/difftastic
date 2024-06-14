@@ -4,15 +4,15 @@ expression: stdout
 input_file: sample_files/html_1.html
 ---
 [1m[93msample_files/html_2.html[39m[0m[2m --- 1/2 --- HTML[0m
-[91;1m1 [0m   [91;1m<!doctype html>[0m
-[2m2 [0m   <[1mhtml[0m>
-[2m3 [0m   <[1mhead[0m>
-[2m4 [0m       <[1mtitle[0m>Example Domain</[1mtitle[0m>
-[2m5 [0m   
-[91;1m6 [0m       [91;3m<[0m[91;3m![0m[91;3m-[0m[91;3m-[0m[91;3m [0m[91;3mdemo[0m[91;3m [0m[91;3mfor[0m[91;3m [0m[91;1;3;4mtree[0m[91;1;3;4m-[0m[91;1;3;4msitter[0m[91;3m [0m[91;3m-[0m[91;3m-[0m[91;3m>[0m
-[2m7 [0m   
-[2m8 [0m       <[1mmeta[0m charset="utf-8" />
-[2m9 [0m       <[1mmeta[0m http-equiv="Content-type" content="text/html; charset=utf-8" />
+[91;1m 1 [0m   [91;1m<!doctype html>[0m
+[2m 2 [0m   <[1mhtml[0m>
+[2m 3 [0m   <[1mhead[0m>
+[2m 4 [0m       <[1mtitle[0m>Example Domain</[1mtitle[0m>
+[2m 5 [0m   
+[91;1m 6 [0m       [91;3m<[0m[91;3m![0m[91;3m-[0m[91;3m-[0m[91;3m [0m[91;3mdemo[0m[91;3m [0m[91;3mfor[0m[91;3m [0m[91;1;3;4mtree[0m[91;1;3;4m-[0m[91;1;3;4msitter[0m[91;3m [0m[91;3m-[0m[91;3m-[0m[91;3m>[0m
+[2m 7 [0m   
+[2m 8 [0m       <[1mmeta[0m charset="utf-8" />
+[2m 9 [0m       <[1mmeta[0m http-equiv="Content-type" content="text/html; charset=utf-8" />
 [2m10 [0m       <[1mmeta[0m name="viewport" content="width=device-width, initial-scale=1" />
 [2m11 [0m       <[1mstyle[0m type="text/css">
 [2m12 [0m       [1mbody[0m {
@@ -27,15 +27,15 @@ input_file: sample_files/html_1.html
 [2m21 [0m           margin: 5em auto;
 [2m22 [0m           padding: 2em;
 [91;1m23 [0m           background-color: [91m#fdfdff[0m;
-   [92;1m1 [0m[92;1m<!DOCTYPE html>[0m
-   [2m2 [0m<[1mhtml[0m>
-   [2m3 [0m  <[1mhead[0m>
-   [2m4 [0m    <[1mtitle[0m>Example Domain</[1mtitle[0m>
-   [2m5 [0m
-   [92;1m6 [0m    [92;3m<[0m[92;3m![0m[92;3m-[0m[92;3m-[0m[92;3m [0m[92;3mdemo[0m[92;3m [0m[92;3mfor[0m[92;3m [0m[92;1;3;4mdifftastic[0m[92;3m [0m[92;3m-[0m[92;3m-[0m[92;3m>[0m
-   [2m7 [0m
-   [2m8 [0m    <[1mmeta[0m charset="utf-8" />
-   [2m9 [0m    <[1mmeta[0m http-equiv="Content-type" content="text/html; charset=utf-8" />
+   [92;1m 1 [0m[92;1m<!DOCTYPE html>[0m
+   [2m 2 [0m<[1mhtml[0m>
+   [2m 3 [0m  <[1mhead[0m>
+   [2m 4 [0m    <[1mtitle[0m>Example Domain</[1mtitle[0m>
+   [2m 5 [0m
+   [92;1m 6 [0m    [92;3m<[0m[92;3m![0m[92;3m-[0m[92;3m-[0m[92;3m [0m[92;3mdemo[0m[92;3m [0m[92;3mfor[0m[92;3m [0m[92;1;3;4mdifftastic[0m[92;3m [0m[92;3m-[0m[92;3m-[0m[92;3m>[0m
+   [2m 7 [0m
+   [2m 8 [0m    <[1mmeta[0m charset="utf-8" />
+   [2m 9 [0m    <[1mmeta[0m http-equiv="Content-type" content="text/html; charset=utf-8" />
    [2m10 [0m    <[1mmeta[0m name="viewport" content="width=device-width, initial-scale=1" />
    [92;1m11 [0m    [92;1m<[0m[92;1mstyle[0m [92mtype[0m[92m=[0m[92m"text/css"[0m[92;1m>[0m
    [92;1m12 [0m      [92;1mp[0m [92;1m{[0m

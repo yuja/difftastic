@@ -4,15 +4,15 @@ expression: stdout
 input_file: sample_files/elm_1.elm
 ---
 [1m[93msample_files/elm_2.elm[39m[0m[2m --- Elm[0m
-[91;1m1 [0m   [1mmodule[0m Main [1mexposing[0m (blue, [91mgreen[0m[91m,[0m list, x, y[91m,[0m [91mz[0m)
-[2m2 [0m   
-[2m3 [0m   
-[91;1m4 [0m   [91;3m{[0m[91;3m-[0m[91;3m [0m[91;1;3;4mbar[0m
-[91;1m5 [0m   [91;3m [0m[91;3m-[0m[91;3m}[0m
-[2m6 [0m   list [1m:[0m List Int
-[2m7 [0m   list [1m=[0m
-[2m8 [0m       [ 1, 2, 3 ]
-[2m9 [0m   
+[91;1m 1 [0m   [1mmodule[0m Main [1mexposing[0m (blue, [91mgreen[0m[91m,[0m list, x, y[91m,[0m [91mz[0m)
+[2m 2 [0m   
+[2m 3 [0m   
+[91;1m 4 [0m   [91;3m{[0m[91;3m-[0m[91;3m [0m[91;1;3;4mbar[0m
+[91;1m 5 [0m   [91;3m [0m[91;3m-[0m[91;3m}[0m
+[2m 6 [0m   list [1m:[0m List Int
+[2m 7 [0m   list [1m=[0m
+[2m 8 [0m       [ 1, 2, 3 ]
+[2m 9 [0m   
 [2m10 [0m   
 [2m11 [0m   blue [1m:[0m a [1m->[0m String
 [2m12 [0m   blue [1m=[0m
@@ -49,15 +49,15 @@ input_file: sample_files/elm_1.elm
 [2m43 [0m               String.join (String.fromInt n)
 [91;1m44 [0m       [91;1min[0m
 [91;1m45 [0m       [91mfoo[0m strings
-   [92;1m1 [0m[1mmodule[0m Main [1mexposing[0m
-   [2m2 [0m    ( blue
-   [2m3 [0m    , list
-   [2m4 [0m    , x
-   [2m5 [0m    , y
-   [2m6 [0m    )
-   [2m7 [0m
-   [2m8 [0m
-   [92;1m9 [0m[92;3m{[0m[92;3m-[0m[92;3m [0m[92;1;3;4mfoo[0m
+   [92;1m 1 [0m[1mmodule[0m Main [1mexposing[0m
+   [2m 2 [0m    ( blue
+   [2m 3 [0m    , list
+   [2m 4 [0m    , x
+   [2m 5 [0m    , y
+   [2m 6 [0m    )
+   [2m 7 [0m
+   [2m 8 [0m
+   [92;1m 9 [0m[92;3m{[0m[92;3m-[0m[92;3m [0m[92;1;3;4mfoo[0m
    [92;1m10 [0m[92;3m [0m[92;3m-[0m[92;3m}[0m
    [2m11 [0mlist [1m:[0m List Int
    [2m12 [0mlist [1m=[0m

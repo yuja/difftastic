@@ -4,26 +4,26 @@ expression: stdout
 input_file: sample_files/bad_combine_1.rs
 ---
 [1m[93msample_files/bad_combine_2.rs[39m[0m[2m --- 1/2 --- Rust[0m
-[2m1 [0m   
-[91;1m2 [0m   [91;1mfn[0m [91mcolumn_widths[0m[91;1m([0m
-[91;1m3 [0m       [91mhunks[0m[91m:[0m [91;1m&[0m[91;1m[[0m[91;1mHunk[0m[91;1m][0m[91m,[0m
-[91;1m4 [0m       [91mlhs_mps[0m[91m:[0m [91;1m&[0m[91;1m[[0m[91;1mMatchedPos[0m[91;1m][0m[91m,[0m
-[91;1m5 [0m       [91mrhs_mps[0m[91m:[0m [91;1m&[0m[91;1m[[0m[91;1mMatchedPos[0m[91;1m][0m[91m,[0m
-[91;1m6 [0m       [91mmax_lhs_src_line[0m[91m:[0m [91;1mLineNumber[0m[91m,[0m
-[91;1m7 [0m       [91mmax_rhs_src_line[0m[91m:[0m [91;1mLineNumber[0m[91m,[0m
-[91;1m8 [0m   [91;1m)[0m  [91;1m{[0m
-[91;1m9 [0m   [91;1m}[0m
+[2m 1 [0m   
+[91;1m 2 [0m   [91;1mfn[0m [91mcolumn_widths[0m[91;1m([0m
+[91;1m 3 [0m       [91mhunks[0m[91m:[0m [91;1m&[0m[91;1m[[0m[91;1mHunk[0m[91;1m][0m[91m,[0m
+[91;1m 4 [0m       [91mlhs_mps[0m[91m:[0m [91;1m&[0m[91;1m[[0m[91;1mMatchedPos[0m[91;1m][0m[91m,[0m
+[91;1m 5 [0m       [91mrhs_mps[0m[91m:[0m [91;1m&[0m[91;1m[[0m[91;1mMatchedPos[0m[91;1m][0m[91m,[0m
+[91;1m 6 [0m       [91mmax_lhs_src_line[0m[91m:[0m [91;1mLineNumber[0m[91m,[0m
+[91;1m 7 [0m       [91mmax_rhs_src_line[0m[91m:[0m [91;1mLineNumber[0m[91m,[0m
+[91;1m 8 [0m   [91;1m)[0m  [91;1m{[0m
+[91;1m 9 [0m   [91;1m}[0m
 [2m10 [0m   
 [2m11 [0m   [1mfn[0m display_line_nums(
 [2m12 [0m   ) -> ([1mString[0m, [1mString[0m) {
 [2m13 [0m       [1mlet[0m display_rhs_line_num: [1mString[0m = [1mmatch[0m rhs_line_num {
 [2m14 [0m           [1mSome[0m(line_num) => {
 [91;1m15 [0m               [1mlet[0m s = format_line_num_padded(line_num, [91mrhs_column_width[0m);
-   [92;1m5 [0m            [1mlet[0m s = format_line_num_padded(line_num, [92mwidths[0m[92m.[0m[92mrhs_line_nums[0m);
-   [2m6 [0m            [1mif[0m rhs_lines_with_novel.contains([1m&[0mline_num) {
-   [2m7 [0m                s.bright_green().to_string()
-   [2m8 [0m            } [1melse[0m {
-   [2m9 [0m                s
+   [92;1m 5 [0m            [1mlet[0m s = format_line_num_padded(line_num, [92mwidths[0m[92m.[0m[92mrhs_line_nums[0m);
+   [2m 6 [0m            [1mif[0m rhs_lines_with_novel.contains([1m&[0mline_num) {
+   [2m 7 [0m                s.bright_green().to_string()
+   [2m 8 [0m            } [1melse[0m {
+   [2m 9 [0m                s
 
 [1msample_files/bad_combine_2.rs[0m[2m --- 2/2 --- Rust[0m
 [2m20 [0m               }

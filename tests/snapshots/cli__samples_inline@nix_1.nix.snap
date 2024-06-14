@@ -4,15 +4,15 @@ expression: stdout
 input_file: sample_files/nix_1.nix
 ---
 [1m[93msample_files/nix_2.nix[39m[0m[2m --- Nix[0m
-[2m1 [0m   { lib, fetchFromGitHub, rustPlatform, tree-sitter }:
-[2m2 [0m   
-[2m3 [0m   rustPlatform.buildRustPackage [1mrec[0m {
-[2m4 [0m     pname = [95m"difftastic"[0m;
-[91;1m5 [0m     version = [91m"[0m[91m0[0m[91m.[0m[91;1;4m12[0m[91m.[0m[91m0[0m[91m"[0m;
-[2m6 [0m   
-[2m7 [0m     src = fetchFromGitHub {
-[2m8 [0m       owner = [95m"wilfred"[0m;
-[2m9 [0m       repo = pname;
+[2m 1 [0m   { lib, fetchFromGitHub, rustPlatform, tree-sitter }:
+[2m 2 [0m   
+[2m 3 [0m   rustPlatform.buildRustPackage [1mrec[0m {
+[2m 4 [0m     pname = [95m"difftastic"[0m;
+[91;1m 5 [0m     version = [91m"[0m[91m0[0m[91m.[0m[91;1;4m12[0m[91m.[0m[91m0[0m[91m"[0m;
+[2m 6 [0m   
+[2m 7 [0m     src = fetchFromGitHub {
+[2m 8 [0m       owner = [95m"wilfred"[0m;
+[2m 9 [0m       repo = pname;
 [2m10 [0m       rev = version;
 [91;1m11 [0m       sha256 = [91m"sha256-A6Z3g6fbYBynyN4OhRrZNO0ZghvT3XnIahdUQ8SE8tU="[0m;
 [2m12 [0m     };
@@ -30,11 +30,11 @@ input_file: sample_files/nix_1.nix
 [91;1m24 [0m   [91m    popd[0m
 [91;1m25 [0m   [91m  ''[0m[91m;[0m
 [2m26 [0m   
-   [92;1m5 [0m  version = [92m"[0m[92m0[0m[92m.[0m[92;1;4m24[0m[92m.[0m[92m0[0m[92m"[0m;
-   [2m6 [0m
-   [2m7 [0m  src = fetchFromGitHub {
-   [2m8 [0m    owner = [95m"wilfred"[0m;
-   [2m9 [0m    repo = pname;
+   [92;1m 5 [0m  version = [92m"[0m[92m0[0m[92m.[0m[92;1;4m24[0m[92m.[0m[92m0[0m[92m"[0m;
+   [2m 6 [0m
+   [2m 7 [0m  src = fetchFromGitHub {
+   [2m 8 [0m    owner = [95m"wilfred"[0m;
+   [2m 9 [0m    repo = pname;
    [2m10 [0m    rev = version;
    [92;1m11 [0m    sha256 = [92m"sha256-Yp0WwzGo8nuRZuiHdUPxPM1SYBeeVA3SMDfHnQmqUqY="[0m;
    [2m12 [0m  };

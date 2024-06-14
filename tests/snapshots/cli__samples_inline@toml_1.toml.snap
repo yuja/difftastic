@@ -4,24 +4,24 @@ expression: stdout
 input_file: sample_files/toml_1.toml
 ---
 [1m[93msample_files/toml_2.toml[39m[0m[2m --- 1/2 --- TOML[0m
-[2m1 [0m   [94;3m# This is a TOML document[0m
-[2m2 [0m   
-[91;1m3 [0m   title [1m=[0m [91m"[0m[91mTOML[0m[91m [0m[91mExample[0m[91m"[0m
-[2m4 [0m   
-[2m5 [0m   [owner]
-[2m6 [0m   name [1m=[0m [95m"Tom Preston-Werner"[0m
-[91;1m7 [0m   dob [1m=[0m [91;1;4m1979[0m[91m-[0m[91;1;4m05[0m[91m-[0m[91;1;4m27[0m[91mT[0m[91m07[0m[91m:[0m[91m32[0m[91m:[0m[91m00[0m[91m-[0m[91m08[0m[91m:[0m[91m00[0m
-[2m8 [0m   
-[2m9 [0m   [database]
+[2m 1 [0m   [94;3m# This is a TOML document[0m
+[2m 2 [0m   
+[91;1m 3 [0m   title [1m=[0m [91m"[0m[91mTOML[0m[91m [0m[91mExample[0m[91m"[0m
+[2m 4 [0m   
+[2m 5 [0m   [owner]
+[2m 6 [0m   name [1m=[0m [95m"Tom Preston-Werner"[0m
+[91;1m 7 [0m   dob [1m=[0m [91;1;4m1979[0m[91m-[0m[91;1;4m05[0m[91m-[0m[91;1;4m27[0m[91mT[0m[91m07[0m[91m:[0m[91m32[0m[91m:[0m[91m00[0m[91m-[0m[91m08[0m[91m:[0m[91m00[0m
+[2m 8 [0m   
+[2m 9 [0m   [database]
 [2m10 [0m   enabled [1m=[0m [1mtrue[0m
 [91;1m11 [0m   ports [1m=[0m [ 8000, [91m8001[0m[91m,[0m 8002 ]
-   [92;1m3 [0mtitle [1m=[0m [92m"[0m[92mTOML[0m[92m [0m[92mExample[0m [92;1;4mChanged[0m[92m"[0m
-   [2m4 [0m
-   [2m5 [0m[owner]
-   [2m6 [0mname [1m=[0m [95m"Tom Preston-Werner"[0m
-   [92;1m7 [0mdob [1m=[0m [92;1;4m2000[0m[92m-[0m[92;1;4m01[0m[92m-[0m[92;1;4m31[0m[92mT[0m[92m07[0m[92m:[0m[92m32[0m[92m:[0m[92m00[0m[92m-[0m[92m08[0m[92m:[0m[92m00[0m
-   [2m8 [0m
-   [2m9 [0m[database]
+   [92;1m 3 [0mtitle [1m=[0m [92m"[0m[92mTOML[0m[92m [0m[92mExample[0m [92;1;4mChanged[0m[92m"[0m
+   [2m 4 [0m
+   [2m 5 [0m[owner]
+   [2m 6 [0mname [1m=[0m [95m"Tom Preston-Werner"[0m
+   [92;1m 7 [0mdob [1m=[0m [92;1;4m2000[0m[92m-[0m[92;1;4m01[0m[92m-[0m[92;1;4m31[0m[92mT[0m[92m07[0m[92m:[0m[92m32[0m[92m:[0m[92m00[0m[92m-[0m[92m08[0m[92m:[0m[92m00[0m
+   [2m 8 [0m
+   [2m 9 [0m[database]
    [2m10 [0menabled [1m=[0m [1mtrue[0m
    [92;1m11 [0mports [1m=[0m [ 8000, 8002 ]
    [2m12 [0mdata [1m=[0m [ [[95m"delta"[0m, [95m"phi"[0m], [3.14] ]
