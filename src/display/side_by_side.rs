@@ -20,21 +20,13 @@ use crate::{
         },
     },
     hash::DftHashMap,
-    lines::{format_line_num, split_on_newlines},
+    lines::{format_line_num, format_line_num_padded, split_on_newlines},
     options::{DisplayMode, DisplayOptions},
     parse::syntax::{zip_pad_shorter, MatchedPos},
     summary::FileFormat,
 };
 
 const SPACER: &str = " ";
-
-fn format_line_num_padded(line_num: LineNumber, column_width: usize) -> String {
-    format!(
-        "{:width$} ",
-        line_num.as_usize() + 1,
-        width = column_width - 1
-    )
-}
 
 fn format_missing_line_num(
     prev_num: LineNumber,
